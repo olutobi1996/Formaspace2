@@ -1,27 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>About Us — FormaSpace</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Formaspace</title>
+
+    <!-- Typography and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+
+    <!-- Phosphor -->
+    <link href="https://unpkg.com/phosphor-icons@1.4.2/src/css/icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
 </head>
 <body>
+  <header class="navbar">
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a href="/" class="logo">
+      <img src="/images/formaspacelogo-wrapper.svg" alt="FormaSpace Logo" />
+    </a>
+
+    <!-- Hamburger button (mobile) -->
+    <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <!-- Navigation wrapper -->
+    <div class="nav-wrapper">
+      <ul class="nav-links main-nav">
+
+        <li class="dropdown">
+          <a href="/private_office.html" class="dropdown-toggle">SPACES</a>
+          <ul class="dropdown-menu">
+            <li><a href="/private_office.html">Private Offices</a></li>
+            <!-- Future links can be re-enabled later -->
+          </ul>
+        </li>
+
+        <li><a href="/journal.html">JOURNAL</a></li>
+        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/connectivity.html">CONNECTIONS</a></li>
+        <li><a href="//enquiry_form.htmll">ENQUIRE</a></li>
+        <li><a href="/location.html">LOCATIONS</a></li>
+
+      </ul>
+    </div>
+
+  </div>
+</header>
+
 
 <div class="page-light-theme">
-
+  <!-- COOKIE BANNER -->
+    <div id="cookie-banner" class="cookie-banner" aria-live="polite" hidden>
+        <p>
+            We use cookies to improve your experience. By continuing to browse, you accept our
+            <a href="/cookies.html">Cookie Policy</a>.
+        </p>
+        <div class="cookie-actions">
+            <button id="accept-cookies" type="button" class="btn-primary">Accept All</button>
+        </div>
+    </div> 
   <!-- HERO SECTION -->
-  <section class="hero-section video-hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="https://formaspace-assets.s3.eu-north-1.amazonaws.com/office-tour.mp4" type="video/mp4">
-      <img src="/images/office-wide.jpg" alt="FormaSpace office interior">
-    </video>
+<section class="hero-section video-hero">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="https://formaspace-assets.s3.eu-north-1.amazonaws.com/office-tour.mp4" type="video/mp4">
+    <img src="/static/videos/office-wide.jpg" alt="Premium office interior">
+  </video>
 
-    <div class="hero-overlay"></div>
-    <div class="container hero-content text-center">
-      <h1 class="heading-xl">Welcome to 21 Wellington Square, Ayr</h1>
-      <p class="subheading">
-        10 high-specification offices designed for quality, scalability & a seamless digital experience.
-      </p>
-    </div>
-  </section>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content text-center">
+    <h1 class="heading-xl">Premium Workspace in the Heart of Ayr</h1>
+    <p class="subheading">Private offices built for productivity and comfort.</p>
+    <a href="/enquiry_form.html" class="btn-primary">Book a Tour</a>
+  </div>
+</section>
 
   <!-- GALLERY + TEXT -->
   <section class="about-gallery-text container" data-aos="fade-up">
@@ -69,6 +129,225 @@
   </section>
 
 </div>
+<footer id="main-footer" class="footer premium-footer">
+  <div class="footer-glow-box">
 
+    <div class="footer-container container" data-aos="fade-up" data-aos-delay="500">
+
+      <!-- Company Info -->
+      <div class="footer-info scroll-fade">
+        <h3>Be Part of the FormaSpace Collective</h3>
+        <p>Experience support, style, and simplicity, every step of the way.</p>
+
+        <h4>Our Flagship Location</h4>
+        <p>
+          <span class="icon gold-icon"><i class="fas fa-map-marker-alt"></i></span>
+          21 Wellington Square, Ayr
+        </p>
+
+        <p>
+          Offering 10 high-specification offices. Designed for quality, scalability, and a seamless digital experience.
+        </p>
+
+        <p>
+          <span class="icon"><i class="fas fa-phone-alt"></i></span>
+          <strong>Call us:</strong>
+          <a href="tel:01292737001">01292 737001</a>
+        </p>
+
+        <p>
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <strong>Email:</strong>
+          <a href="mailto:enquiries@formaspace.co.uk">enquiries@formaspace.co.uk</a>
+        </p>
+
+        <!-- Brochure -->
+        <div class="brochure-buttons">
+          <a href="static/files/formaspace-brochure.pdf" class="btn-secondary" target="_blank">
+            View Brochure
+          </a>
+          <a href="static/files/formaspace-brochure.pdf" class="btn-secondary" download>
+            📄 Download Brochure
+          </a>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM (Netlify) -->
+      <div class="footer-form scroll-fade">
+        <h4>How Can We Help?</h4>
+
+        <div class="form-card">
+          <form
+            name="footer-enquiry"
+            method="POST"
+            data-netlify="true"
+            class="contact-form"
+          >
+            <input type="hidden" name="form-name" value="footer-enquiry">
+
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="tel" name="phone" placeholder="Phone">
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <textarea name="space_requirements" placeholder="Space Requirements"></textarea>
+            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+
+            <button type="submit" class="cta-button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SUBSCRIBE FORM (Netlify) -->
+      <div class="footer-subscribe scroll-fade">
+        <h4>Stay In The Loop</h4>
+        <p>Sign up to receive updates, insights & offers.</p>
+
+        <form
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+          class="subscribe-form"
+        >
+          <input type="hidden" name="form-name" value="newsletter">
+
+          <div class="subscribe-box">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit" class="cta-button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div id="footer-bottom">
+    <div class="container footer-bottom-content">
+
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=61575636894811" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/forma-space/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/forma__space" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.tiktok.com/@formaspace_" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </li>
+      </ul>
+
+      <p id="footer-info">
+        &copy; <span id="year"></span> FormaSpace |
+        <a href="/privacy.html">Privacy Policy</a> |
+        <a href="/terms.html">Terms</a> |
+        <a href="/cookies.html">Cookies</a>
+      </p>
+
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+    <!-- FAQ TOGGLE -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Scroll Animations -->
+    <script src="/static/css/js/scroll-animations.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+    </script>
+
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        const tiltElements = Array.from(
+            document.querySelectorAll("img, .service-card, .feature-image img")
+        ).filter(el => !el.closest(".logo"));
+
+        VanillaTilt.init(tiltElements, {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+            gyroscope: true,
+            scale: 1.05
+        });
+    </script>
+
+    <!-- Mobile Nav -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navWrapper = document.querySelector('.nav-wrapper');
+            const navLinks = document.querySelectorAll('.nav-links');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            if (!menuToggle) return;
+
+            menuToggle.addEventListener('click', () => {
+                navWrapper.classList.toggle('open');
+                navLinks.forEach(ul => ul.classList.toggle('open'));
+            });
+
+            dropdowns.forEach(dropdown => {
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                toggle.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('open');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- COOKIE LOGIC -->
+    <script>
+        (function () {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('accept-cookies');
+            if (!banner || !acceptBtn) return;
+
+            const KEY = 'fs_cookies_accepted';
+
+            if (!localStorage.getItem(KEY)) {
+                banner.removeAttribute('hidden');
+                requestAnimationFrame(() => banner.classList.add('show'));
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem(KEY, '1');
+                banner.classList.remove('show');
+                banner.setAttribute('hidden', '');
+            });
+        })();
+    </script>
 </body>
 </html>
