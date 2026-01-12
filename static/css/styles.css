@@ -2091,6 +2091,7 @@ a.btn-primary:hover {
 .faq-item.active .faq-answer {
   max-height: 200px;
   padding: 1rem;
+  color: white;
 }
 
 .value-card {

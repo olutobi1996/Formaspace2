@@ -359,10 +359,12 @@
         <p>Sign up to receive updates, insights & offers.</p>
 
         <form
-          name="newsletter"
-          method="POST"
-          data-netlify="true"
-          class="subscribe-form"
+           method="POST"
+           name="newsletter"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/thank-you.html"
+          name="footer-enquiry"
         >
           <input type="hidden" name="form-name" value="newsletter">
 
