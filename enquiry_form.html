@@ -94,9 +94,9 @@
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
-  action="/thank-you.html"
 >
-  <input type="hidden" name="form-name" value="enquiry">
+   <input type="hidden" name="form-name" value="enquiry">
+  <input type="hidden" name="redirect" value="/thank-you.html">
   <p hidden>
     <label>Don’t fill this out: <input name="bot-field"></label>
   </p>
@@ -214,12 +214,13 @@
 
         <div class="form-card">
           <form
-            name="footer-enquiry"
-            method="POST"
-            data-netlify="true"
-            class="contact-form"
+            name="enquiry"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="form-name" value="footer-enquiry">
+            <input type="hidden" name="form-name" value="enquiry">
+             <input type="hidden" name="redirect" value="/thank-you.html">
 
             <input type="text" name="name" placeholder="Name" required>
             <input type="tel" name="phone" placeholder="Phone">
