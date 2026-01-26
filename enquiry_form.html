@@ -89,75 +89,86 @@
       <div class="col-md-8">
         <div class="fancy-hover-box p-4">
 
-   <form
+ <form
   name="enquiry"
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
+  action="/thank-you.html"
 >
+  <!-- Hidden fields required by Netlify -->
   <input type="hidden" name="form-name" value="enquiry">
-  <input type="hidden" name="redirect" value="/thank-you.html">
   <p hidden>
     <label>Don’t fill this out: <input name="bot-field"></label>
   </p>
 
+  <!-- Name -->
   <div class="mb-3">
     <label>Name</label>
     <input type="text" name="name" class="form-control" required>
   </div>
 
+  <!-- Company Name -->
   <div class="mb-3">
     <label>Company Name</label>
     <input type="text" name="company_name" class="form-control">
   </div>
 
+  <!-- Email -->
   <div class="mb-3">
     <label>Email</label>
     <input type="email" name="email" class="form-control" required>
   </div>
 
+  <!-- Phone -->
   <div class="mb-3">
     <label>Phone</label>
     <input type="tel" name="phone" class="form-control">
   </div>
 
+  <!-- Team Size -->
   <div class="mb-3">
     <label>Team Size</label>
     <input type="text" name="team_size" class="form-control">
   </div>
 
+  <!-- Move-in Timeline -->
   <div class="mb-3">
     <label>Move-in Timeline</label>
     <input type="text" name="move_in_timeline" class="form-control">
   </div>
 
+  <!-- Budget Range -->
   <div class="mb-3">
     <label>Budget Range</label>
     <input type="text" name="budget_range" class="form-control">
   </div>
 
+  <!-- Space Requirements -->
   <div class="mb-3">
     <label>Space Requirements</label>
     <textarea name="space_requirements" class="form-control" rows="3"></textarea>
   </div>
 
+  <!-- Message -->
   <div class="mb-3">
     <label>Message</label>
     <textarea name="message" class="form-control" rows="4" required></textarea>
   </div>
 
+  <!-- How did you hear about us -->
   <div class="mb-3">
     <label>How did you hear about us?</label>
     <input type="text" name="hear_about_us" class="form-control">
   </div>
 
+  <!-- Submit Button -->
   <div class="text-center mt-4">
     <button type="submit" class="btn btn-primary px-4 py-2">
       Send Enquiry
     </button>
   </div>
 </form>
-
 
         </div>
       </div>
