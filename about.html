@@ -214,28 +214,33 @@
         </div>
       </div>
 
-      <!-- CONTACT FORM (Netlify) -->
+  <!-- CONTACT FORM (Netlify) -->
       <div class="footer-form scroll-fade">
         <h4>How Can We Help?</h4>
 
         <div class="form-card">
           <form
-            name="footer-enquiry"
-            method="POST"
-            data-netlify="true"
-            class="contact-form"
-          >
-            <input type="hidden" name="form-name" value="footer-enquiry">
+  name="footer-enquiry"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/thank-you.html"
+  class="contact-form"
+>
+  <input type="hidden" name="form-name" value="footer-enquiry">
+  <p hidden>
+    <label>Don’t fill this out: <input name="bot-field"></label>
+  </p>
 
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="tel" name="phone" placeholder="Phone">
-            <input type="email" name="email" placeholder="Email Address" required>
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="tel" name="phone" placeholder="Phone">
+  <input type="email" name="email" placeholder="Email Address" required>
 
-            <textarea name="space_requirements" placeholder="Space Requirements"></textarea>
-            <textarea name="message" placeholder="Message" rows="4" required></textarea>
+  <textarea name="space_requirements" placeholder="Space Requirements"></textarea>
+  <textarea name="message" placeholder="Message" rows="4" required></textarea>
 
-            <button type="submit" class="cta-button">Submit</button>
-          </form>
+  <button type="submit" class="cta-button">Submit</button>
+</form>
         </div>
       </div>
 
@@ -245,12 +250,14 @@
         <p>Sign up to receive updates, insights & offers.</p>
 
         <form
-          name="newsletter"
-          method="POST"
-          data-netlify="true"
-          class="subscribe-form"
-        >
-          <input type="hidden" name="form-name" value="newsletter">
+  method="POST"
+  name="newsletter"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/thank-you.html"
+>
+  <input type="hidden" name="form-name" value="newsletter">
+
 
           <div class="subscribe-box">
             <input type="email" name="email" placeholder="Enter your email" required>
