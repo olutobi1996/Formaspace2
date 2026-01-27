@@ -3,109 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank You | Route One</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Thank You | FormaSpace</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main site CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
   <style>
-    /* Center layout */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
+      background-color: #0d0d0d;
     }
 
-    .success-wrapper {
+    .thank-you-wrapper {
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url(/images/hogs-coaching.jpg) no-repeat center center / cover;
+      padding: 2rem;
+    }
+
+    .thank-you-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 3rem 4rem;
+      max-width: 650px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    }
+
+    .thank-you-box h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.75rem;
+      color: #000;
+      margin-bottom: 1rem;
       position: relative;
+      display: inline-block;
     }
 
-    .success-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
+    .thank-you-box h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #d4af37;
+      margin: 0.6rem auto 0;
+      border-radius: 2px;
     }
 
-  .success-box {
-  background: var(--brand-white);
-  border: 2px solid var(--brand-teal);
-  color: var(--brand-navy);
-  border-radius: 16px;
-  padding: 3rem 4rem;
-  max-width: 600px;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(47, 227, 196, 0.6); /* teal glow */
-}
-
-.success-box h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 2.5rem;
-  color: var(--brand-navy);
-}
-
-.success-box h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: var(--brand-teal);
-  margin: 0.8rem auto 0;
-  border-radius: 2px;
-}
-
-.success-box p {
-  font-style: italic;
-  color: var(--brand-navy);
-}
-
-.cta-button {
-  background: var(--brand-teal);
-  color: var(--brand-navy);
-  padding: 0.8rem 1.6rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: var(--brand-teal-dark);
-  color: var(--brand-white);
-  box-shadow: 0 0 15px var(--brand-teal);
-}
-
-
-    @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+    .thank-you-box p {
+      color: #444;
+      font-size: 1.1rem;
+      margin: 1.25rem 0;
+      line-height: 1.7;
     }
 
-    /* Responsive */
-    @media(max-width: 768px){
-      .success-box {
+    .thank-you-actions {
+      margin-top: 2rem;
+    }
+
+    .thank-you-actions a {
+      display: inline-block;
+      background: #d4af37;
+      color: #0d0d0d;
+      padding: 0.75rem 2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .thank-you-actions a:hover {
+      background: #bfa128;
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      .thank-you-box {
         padding: 2rem;
-        margin: 1rem;
+      }
+
+      .thank-you-box h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
 
+  <!-- Auto redirect -->
   <script>
-    // Auto-redirect after 5 seconds to homepage
     setTimeout(() => {
-      window.location.href = "/";
+      window.location.href = "/index.html";
     }, 5000);
   </script>
 </head>
+
 <body>
-  <div class="success-wrapper">
-    <div class="success-overlay"></div>
-    <div class="success-box">
-      <h1>Thank You!</h1>
-      <p>Your message has been successfully sent to <strong>Route One</strong>.<br>
-      We appreciate your enquiry and will get back to you shortly.</p>
-      <p>All sessions are small-group football coaching, focused on individual development and fun!</p>
-      <a href="/index.html" class="cta-button">Home</a>
+  <div class="thank-you-wrapper">
+    <div class="thank-you-box">
+      <h1>Thank You</h1>
+
+      <p>
+        Your enquiry has been successfully submitted to <strong>FormaSpace</strong>.
+        One of our team members will be in touch shortly.
+      </p>
+
+      <p>
+        We look forward to helping you find the perfect workspace in the heart of Ayr.
+      </p>
+
+      <div class="thank-you-actions">
+        <a href="/index.html">Back to Home</a>
+      </div>
     </div>
   </div>
 </body>
